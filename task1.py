@@ -3,3 +3,11 @@
 # Пример ввода
 # яблоки сливы груши персики манго киви апельсины
 # 34 56 23 89 55 32 11
+
+dct = dict()
+k = list(map(str, input().split()))
+n = list(map(int, input().split()))
+for i in range(len(k)):
+    dct[k[i]] = n[i]
+
+print(dct)
