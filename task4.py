@@ -18,9 +18,10 @@ def delete_even(x):
 	i = 0
 	while i < l:
 		if x[i] % 2 == 0:
-			x.pop(x[i])
+			x.pop(i)
 			l -= 1
 			i -= 1
 		i += 1
+	return x
 
 print(delete_even([11, 20, 30, 17, 6, 24, 90, 15, 17]))

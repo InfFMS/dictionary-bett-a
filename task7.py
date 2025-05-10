@@ -6,3 +6,20 @@
 # Первый словарь: {'a': 100, 'b': 200, 'c':300}
 # Второй словарь: {'a': 300, 'b': 200, 'd':400}
 # Результат: {'a': 400, 'b': 400, 'd': 400, 'c': 300}
+
+def do_update(dct1, dct2):
+    dct1_keys = dct1.keys()
+    dct2_keys = dct2.keys()
+    for i in dct2_keys:
+        if i in dct1_keys:
+            a = dct1[i]
+            b = dct2[i]
+            dct1[i] = a + b
+        else:
+            t = dct2[i]
+            dct1[i] = t
+    return dct1
+
+dct1 = {'a': 100, 'b': 200, 'c':300}
+dct2 = {'a': 300, 'b': 200, 'd':400}
+print(do_update(dct1, dct2))
